@@ -63,5 +63,6 @@ function runOneCase()
 
 function testDeinit() { runOneCase deinit; }
 function testAddTwice() { runOneCase add_twice; }
+function testNameWithHyphen() { runOneCase name_with_hyphen; }
 
 . "${root_dir}/lib/shunit2/src/shunit2"
