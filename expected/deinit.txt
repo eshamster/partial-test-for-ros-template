@@ -1,0 +1,19 @@
+--- before --- 
+current default is "default"
+--- after init --- 
+current default is "test_deinit"
+test_deinit
+test_deinit/
+--- add a file ---
+      copy  test 
+--- after deinit --- 
+current default is "default"
+--- deinit again --- 
+template: "test_deinit" not found.
+errno: 1
+--- try to remove default ---
+can't remove "default".
+errno: 1
+--- use deinit without template name ---
+template name is required.
+errno: 1

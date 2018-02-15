@@ -1,0 +1,7 @@
+setenv_base_dir="$(readlink -f $(dirname ${BASH_SOURCE}))"
+
+export WORK_DIR="${setenv_base_dir}/_work"
+
+if [ ! -d "${WORK_DIR}" ]; then
+    mkdir "${WORK_DIR}"
+fi
