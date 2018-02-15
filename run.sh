@@ -62,5 +62,6 @@ function runOneCase()
 }
 
 function testDeinit() { runOneCase deinit; }
+function testAddTwice() { runOneCase add_twice; }
 
 . "${root_dir}/lib/shunit2/src/shunit2"
