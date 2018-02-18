@@ -1,0 +1,44 @@
+--- create template ---
+      copy  file2 
+      djula file1 
+--- export ---
+- check file list -
+.
+./file1
+./file2
+./roswell.init.test-export.asd
+- check file content
+> file1
+abc {{ name }} def
+> file2
+fed {{ eman }} cba
+--- modify templates ---
+- with direcctory -
+      copy  dir/file3 
+      djula file1 
+--- re-export ---
+- check file list -
+.
+./dir
+./dir/file3
+./file1
+./file2
+./roswell.init.test-export.asd
+- check file content
+> file1
+abc {{ name }} def
+additional line
+> dir/file3
+aaa {{ bbb }} ccc
+--- export to another pass ---
+output_dir
+output_dir/dir
+output_dir/dir/file3
+output_dir/file1
+output_dir/roswell.init.test-export.asd
+--- try to export default ---
+template "default" can't be exported.
+--- export not default template ---
+./roswell.init.test-export.asd
+./roswell.init.test-export.asd
+./output_dir/roswell.init.test-export.asd

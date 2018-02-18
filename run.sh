@@ -34,7 +34,7 @@ function checkResult()
         fail "There is no result file: \"${result}\""
     fi
 
-    assertTrue "Test ${name}" "diff ${result} ${expected} > $(diffFilePath ${name})"
+    assertTrue "Test ${name}" "diff ${expected} ${result} > $(diffFilePath ${name})"
 }
 
 function oneTimeSetUp()
@@ -64,5 +64,8 @@ function runOneCase()
 function testDeinit() { runOneCase deinit; }
 function testAddTwice() { runOneCase add_twice; }
 function testNameWithHyphen() { runOneCase name_with_hyphen; }
+function testExport() { runOneCase export; }
+
+# function suite() { suite_addTest testExport; }
 
 . "${root_dir}/lib/shunit2/src/shunit2"
