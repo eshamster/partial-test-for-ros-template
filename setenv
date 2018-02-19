@@ -5,3 +5,10 @@ export WORK_DIR="${setenv_base_dir}/_work"
 if [ ! -d "${WORK_DIR}" ]; then
     mkdir "${WORK_DIR}"
 fi
+
+export RESOURCE_DIR="${setenv_base_dir}/resource"
+
+if [ ! -d "${RESOURCE_DIR}" ]; then
+    echo "ERROR: There is no resource directory: \"${RESOURCE_DIR}\"" 1>&2
+    exit 1
+fi

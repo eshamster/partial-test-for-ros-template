@@ -65,7 +65,8 @@ function testDeinit() { runOneCase deinit; }
 function testAddTwice() { runOneCase add_twice; }
 function testNameWithHyphen() { runOneCase name_with_hyphen; }
 function testExport() { runOneCase export; }
+function testImport() { runOneCase import; }
 
-# function suite() { suite_addTest testExport; }
+# function suite() { suite_addTest testImport; }
 
 . "${root_dir}/lib/shunit2/src/shunit2"

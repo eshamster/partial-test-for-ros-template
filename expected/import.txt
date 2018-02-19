@@ -1,0 +1,12 @@
+--- import ---
+      copy  dir/file3 -> "dir/{{ name }}.txt"
+0600  copy  file2 
+      djula file1 
+--- import other dir ---
+      copy  dir/file3 -> "dir/{{ name }}.txt"
+0600  copy  file2 
+      djula file1 
+--- case where a file is not exist ---
+errno: 1
+--- case where there is no asd ---
+  "roswell.init.*.asd" is not exist
