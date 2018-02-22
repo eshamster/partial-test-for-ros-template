@@ -1,0 +1,9 @@
+current default type is "copy"
+--- change default type ---
+      djula file2 
+      copy  file1 
+current default type is "djula"
+--- add file1 again (doesn't change type) ---
+      djula file2 
+      copy  file1 
+current default type is "djula"
