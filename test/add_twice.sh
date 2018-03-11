@@ -10,7 +10,7 @@ function ros_t()
     ros template $@
 }
 
-ros_t deinit ${test_name} > /dev/null 2>&1
+ros_t deinit ${test_name} > /dev/null 2>&1 && :
 ros_t init ${test_name}
 ros_t checkout ${test_name}
 ros_t rm ${file}
