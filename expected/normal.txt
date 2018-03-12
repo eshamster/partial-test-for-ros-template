@@ -1,0 +1,24 @@
+--- create template ---
+- check content -
+      copy  file_rename -> "rename_{{name}}.txt"
+      djula file_djula 
+      copy  file_normal 
+sample_{{name}}
+--- init using the template ---
+- check content -
+file_djula
+file_normal
+rename_sample.txt
+==> file_djula <==
+sample_sample_this
+
+==> file_normal <==
+sample_{{name}}
+
+==> rename_sample.txt <==
+sample
+--- remove item ---
+      copy  file_rename -> "rename_{{name}}.txt"
+      copy  file_normal 
+--- cleanup ---
++ ros template deinit test-normal
